@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Build>$(BUILD_NUMBER)</Build>
+    <Revision>$(SVN_REVISION)</Revision>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89A872A9-36C8-4892-AFB3-FA8F9A6514ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cOFolderPicker</RootNamespace>
+    <AssemblyName>cOFolderPicker</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ProductInfo.cs">
+      <Link>Properties\ProductInfo.cs</Link>
+    </Compile>
+    <Compile Include="FolderDialog.cs" />
+    <Compile Include="FolderPickerResult.cs" />
+    <Compile Include="Helper\RegistryListsHelper.cs" />
+    <Compile Include="Model\IDatabase.cs" />
+    <Compile Include="Model\IRegistry.cs" />
+    <Compile Include="Model\RegistryDatabases.cs" />
+    <Compile Include="Model\SystemFolder.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Registry.cs" />
+    <Compile Include="Helper\FolderTreeHelper.cs" />
+    <Compile Include="Helper\StringTrim.cs" />
+    <Compile Include="Helper\IconHelper.cs" />
+    <Compile Include="Model\IFolder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="ViewModel\FolderTreeViewModel.cs" />
+    <Compile Include="ViewModel\MTObservableCollection.cs" />
+    <Compile Include="ViewModel\TreeViewItemBehavior.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="View\FolderPickerWindow.xaml.cs">
+      <DependentUpon>FolderPickerWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\LibraryFolder.ico" />
+    <Content Include="Icon\rootFolder.ico" />
+    <Content Include="Icon\VaultFolder.ico" />
+    <None Include="Icon\Star.ico" />
+    <None Include="Icon\StarEmpty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\FolderPickerWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!--Import the MSBuild VersionNumber Target file from the MSBuild Installation Directory (under Program Files (x86)\MSBuild\)-->
+  <Import Project="$(MSBuildExtensionsPath)\ExtensionPack\4.0\MSBuild.ExtensionPack.VersionNumber.Targets" Condition=" '$(Build)' != '' AND '$(Revision)' != '' " />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+		 Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
