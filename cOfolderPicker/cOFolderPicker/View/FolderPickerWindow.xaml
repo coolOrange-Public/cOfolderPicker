@@ -172,6 +172,16 @@
 												Width="155" />
 							</GridView>
 						</ListView.View>
+						<ListView.InputBindings>
+							<KeyBinding Key="Delete"
+										Command="{Binding RemoveSelectedFavoriteCommand}"></KeyBinding>
+						</ListView.InputBindings>
+						<ListView.ItemContainerStyle>
+							<Style TargetType="ListBoxItem">
+								<Setter Property="ToolTip"
+										Value="Press 'Delete' key to remove from Favorites" />
+							</Style>
+						</ListView.ItemContainerStyle>
 					</ListView>
 				</StackPanel>
 				<StackPanel Grid.Row="1"
@@ -423,7 +433,10 @@
 					  IsCancel="True"
 					  Height="20" />
 		</Grid>
-		<Canvas x:Name="Layer_1" HorizontalAlignment="Right" Width="40" Margin="2">
+		<Canvas x:Name="Layer_1"
+				HorizontalAlignment="Right"
+				Width="40"
+				Margin="2">
 			<Canvas.RenderTransform>
 				<ScaleTransform ScaleX="0.25"
 								ScaleY="0.25" />

@@ -80,8 +80,8 @@
     <Content Include="Icon\LibraryFolder.ico" />
     <Content Include="Icon\rootFolder.ico" />
     <Content Include="Icon\VaultFolder.ico" />
-    <None Include="Icon\Star.ico" />
-    <None Include="Icon\StarEmpty.ico" />
+    <Content Include="Icon\Star.ico" />
+    <Content Include="Icon\StarEmpty.ico" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="View\FolderPickerWindow.xaml">

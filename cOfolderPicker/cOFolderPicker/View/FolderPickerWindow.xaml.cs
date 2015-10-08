@@ -41,8 +41,8 @@ namespace cOFolderPicker.View
 			favoritesDb = favoritesDb ?? new RegistryDatabaseFavorites(String.Format("{0}_Favorite", rootFolder.GetType().Name));
 			var folderTree = new FolderTreeViewModel(rootFolder, _historyDb, favoritesDb);
 			FolderTreeViewModel.UserInteractionOn = true;
-			FolderTreeHelper.FindFolder(folderToSelect, folderTree); //Search for folder to select
-			DataContext = folderTree; // Let the UI bind to the view-model.
+			FolderTreeHelper.FindFolder(folderToSelect, folderTree); 
+			DataContext = folderTree; 
 		}
 
 		private readonly IDatabase _historyDb;

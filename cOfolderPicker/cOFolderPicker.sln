@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cOFolderPicker", "cOFolderPicker\cOFolderPicker.csproj", "{89A872A9-36C8-4892-AFB3-FA8F9A6514ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{82113413-A9A3-45BE-B111-C583E6B5E9FE}"
@@ -8,7 +10,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ProductInfo.cs = ProductInfo.cs
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cOFolderPickerUtils.Vault2013", "cOFolderPickerUtils.Vault2013\cOFolderPickerUtils.Vault2013.csproj", "{B4B05084-BA19-4148-B03E-61302FD2FC5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cOFolderPickerUtils.Vault2014", "cOFolderPickerUtils.Vault2014\cOFolderPickerUtils.Vault2014.csproj", "{81BAA57C-69FD-4E80-80D4-70FA133056AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cOFolderPickerUtils.Vault2015", "cOFolderPickerUtils.Vault2015\cOFolderPickerUtils.Vault2015.csproj", "{EA63212D-AAA3-4D6A-A686-A72C33538B57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cOFolderPickerUtils.Vault2016", "cOFolderPickerUtils.Vault2016\cOFolderPickerUtils.Vault2016.csproj", "{177CC7CB-A3EF-41A4-B941-5F9823F7F577}"
+EndProject
 Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -18,12 +32,24 @@ Global
 		{89A872A9-36C8-4892-AFB3-FA8F9A6514ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89A872A9-36C8-4892-AFB3-FA8F9A6514ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89A872A9-36C8-4892-AFB3-FA8F9A6514ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4B05084-BA19-4148-B03E-61302FD2FC5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4B05084-BA19-4148-B03E-61302FD2FC5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4B05084-BA19-4148-B03E-61302FD2FC5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4B05084-BA19-4148-B03E-61302FD2FC5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81BAA57C-69FD-4E80-80D4-70FA133056AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81BAA57C-69FD-4E80-80D4-70FA133056AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81BAA57C-69FD-4E80-80D4-70FA133056AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81BAA57C-69FD-4E80-80D4-70FA133056AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA63212D-AAA3-4D6A-A686-A72C33538B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA63212D-AAA3-4D6A-A686-A72C33538B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA63212D-AAA3-4D6A-A686-A72C33538B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA63212D-AAA3-4D6A-A686-A72C33538B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{177CC7CB-A3EF-41A4-B941-5F9823F7F577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{177CC7CB-A3EF-41A4-B941-5F9823F7F577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{177CC7CB-A3EF-41A4-B941-5F9823F7F577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{177CC7CB-A3EF-41A4-B941-5F9823F7F577}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal
